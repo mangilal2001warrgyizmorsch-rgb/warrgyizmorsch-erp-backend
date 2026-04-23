@@ -1,2 +1,2 @@
-const SalesOrder = require("./src/models/SalesOrder.js");
+import SalesOrder from "./src/models/SalesOrder.js";
 console.log("Analyzing...");

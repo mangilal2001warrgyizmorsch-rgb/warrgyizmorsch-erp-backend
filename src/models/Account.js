@@ -10,7 +10,6 @@ const accountSchema = new mongoose.Schema({
   isActive: { type: Boolean, default: true },
 }, { timestamps: true });
 
-accountSchema.index({ code: 1 });
 accountSchema.index({ type: 1 });
 
 export default mongoose.model("Account", accountSchema);

@@ -18,7 +18,6 @@ const productSchema = new mongoose.Schema({
   isActive: { type: Boolean, default: true },
 }, { timestamps: true });
 
-productSchema.index({ sku: 1 });
 productSchema.index({ category: 1 });
 
 export default mongoose.model("Product", productSchema);

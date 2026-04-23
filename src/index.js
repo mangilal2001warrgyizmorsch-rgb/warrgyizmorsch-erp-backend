@@ -22,6 +22,7 @@ import automationsRoutes from "./routes/automations.js";
 import reportsRoutes from "./routes/reports.js";
 import operationsRoutes from "./routes/operations.js";
 import integrationsRoutes from "./routes/integrations.js";
+import challanRoutes from "./routes/challan.js";
 import { runDailyChecks } from "./cron/dailyChecks.js";
 import { syncAllIndiaMartLeads } from "./services/indiamart.js";
 
@@ -52,6 +53,7 @@ app.use("/api/automations", automationsRoutes);
 app.use("/api/reports", reportsRoutes);
 app.use("/api/operations", operationsRoutes);
 app.use("/api/integrations", integrationsRoutes);
+app.use("/api/challan", challanRoutes);
 
 // Health check
 app.get("/api/health", (req, res) => res.json({ status: "ok", time: new Date().toISOString() }));
